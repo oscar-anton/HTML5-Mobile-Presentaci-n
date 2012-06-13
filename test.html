@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Orientacion Test</title>
+    </head>
+    <style type="text/css">
+	    body, html{
+	    	font-family: Arial, Helvetica, sans-serif;
+	    	height:100%;
+	    }
+	    
+	    .page{
+	    	height:100%;
+	    }
+	    
+	    header, footer{
+	    	background-color:#000;
+	    	margin:0px;
+	    	text-align: center;
+	    	padding:3px;
+	    	color:#fff;	    		    	
+	    }
+	    
+	    footer ul{
+	    	margin:0px;
+	    	padding:0px;
+	    	list-style: none;
+	    	min-height:60px;
+	    }
+	    footer li{
+	    	float:left;
+	    	width:33%;
+	    	border:solid 1px #fff;
+	    }
+	    
+	    footer li a{
+	    	color:#fff;
+	    	text-decoration:none;	    	
+	    	width:100%;
+	    	display:block;
+	    	padding-top:20px;
+	    	padding-bottom:20px;
+	    	text-align: center;
+	    
+	    }
+	    
+	    section.content{
+	    	height:200px;
+	    	padding-top:100px;
+	    	font-size: 22px;
+	    	text-align: center;	
+	    }
+
+ 
+		@media screen and (orientation:landscape) {		    
+		    .main{
+		    	float:right;
+		    	width:70%;
+		    	height:100%;
+		    	
+		    }
+		    
+		    footer{
+		    	float:left;
+		    	width:29%;
+		    	height:100%;
+		    }
+		    
+		    footer li{
+		    	float:none;
+		    	width:100%;
+		    }
+		    
+		    footer ul{
+		    	list-style: none;
+		    	height:100%;
+		    }			  	 
+		}
+
+    </style>
+    <body>
+	<section class="page">
+		<div class="main">
+			<header><h1>Cabecera</h1></header>
+			<section class="content">
+				Contenido
+			</section>
+		</div>
+		<footer>
+			<nav>
+				<ul>
+					<li><a href="#A">A</a></li>
+					<li><a href="#B">B</a></li>
+					<li><a href="#C">C</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</section>
+    </body>
+</html>

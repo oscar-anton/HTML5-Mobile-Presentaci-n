@@ -1,0 +1,626 @@
+<!doctype html>  
+<html lang="es">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>HTML5 Mobile</title>
+
+		<meta name="description" content="Presentación HTML5 Mobile para HTML5 Spain.">
+		<meta name="author" content="Oscar Anton">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+
+		<link rel="stylesheet" href="lib/zenburn.css">
+	</head>
+	
+	<body>
+		
+		<div class="reveal">
+
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>HTML5 Mobile</h1>
+					<h3 class="inverted">...apps multiplataforma</h3>
+					<div><img src="img/pre.jpg" /></div>
+
+					<script>
+						// Delicously hacky. Look away.
+						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
+					</script>
+				</section>
+				
+				<section>
+					<h2>Unos datos que marean</h2>
+					<ul>
+						<li>mas de <b>152</b> millones de smartphones en todo el mundo</li>
+						<li><b>59%</b> son Android </li>
+						<li><b>23%</b> son iOS</li>
+						<li>Symbian y Blackberry han caido al <b>6%</b></li>
+					</ul>
+					<div><img src="img/mobile_charts.png" /></div>
+				</section>
+				
+				<section>
+					<h2>¿Y las tablets?</h2>
+					<ul>
+						<li>mas de <b>106</b> millones de tablets en todo el mundo</li>
+						<li><b>44%</b> son Android </li>
+						<li><b>54%</b> son iOS</li>
+					</ul>
+					<div><img src="img/tablet_charts.png" /></div>
+				</section>		
+				
+				<section>
+					<h2>¿Que tienen en común estos mas de 250 millones de usuarios?</h2>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<h1>Navegadores HTML5</h1>
+					<p><a href="http://mobilehtml5.org/" target="_blank">tabla de compatibilidad</a></p>
+				</section>						
+				
+				
+				<section>
+					<h1>¿Puedo hacer Apps en HTML5?</h1>
+					<p>Respuesta corta: <strong>Si</strong></p>
+					<p>Respuesta larga: <strong>Si, pero recuerda que HTML5 no para de evolucionar y las implementaciones de los navegadores moviles aun estan en desarrollo, no va a ser un camino de rositas...</strong></p>
+				</section>	
+				
+			
+				<section>
+					<h2>Factores <strong>Negativos</strong> a tener en cuenta</h2>
+					<ol>
+						<li class="fragment">Alta segmentación en Android (<a href="http://www.elandroidelibre.com/2010/04/la-segmentacion-de-android-%C2%BFque-es-eso.html" target="_blank">ver ejemplos</a>)</li>
+						<li class="fragment">La especificación aun no esta cerrada</li>
+						<li class="fragment">Dependiendo de la complejidad del codigo te va a tocar testear muy bien la aplicación</li>
+						<li class="fragment">Si abusas de javascript tu aplicación se puede volver lenta (exceso de librerias o animaciones Js)</li>
+						<li class="fragment">Las aplicaciones nativas siempre serán mas rápidas y gestionaran mejor la memoria (por eso son nativas)</li>
+					</ol>
+				</section>											
+				
+				<section>
+					<h2>Factores <strong>Positivos</strong> a tener en cuenta</h2>
+					<ol>
+						<li class="fragment">Tu aplicación es facilmente portable a diferentes plataformas</li>
+						<li class="fragment">Tienes gran libertad a la hora de definir el look&amp;feel o diseño de tu app</li>
+						<li class="fragment">Cada vez hay mas frameworks HTML5 que te haran la vida más fácil</li>
+						<li class="fragment">Los tiempos de desarrollo se acortan</li>
+						<li class="fragment">Es un mercado en crecimiento</li>
+					</ol>
+				</section>	
+				
+				
+				<section>
+					<h2>¿Cuando elegir entre desarrollar una App Nativa o una en HTML5?</h2>
+					<ol>
+						<li class="fragment">Si tu aplicacion no requiere gran rendimiento gráfico, no tiene sentido usar HTML5.</li>
+						<li class="fragment">Si tu aplicación es sencilla a nivel gráfico, puede ser una buena opción.</li>
+						<li class="fragment">Si quieres hacer una App multiplataforma en poco tiempo HTML5 te ahorrara costes.</li>
+						<li class="fragment">Si combinas HTML5/CSS3/Javascript/Nativo correctamente, las Apps que desarrolles pueden ser iguales o mejores que las nativas en cuanto a calidad/coste de desarrollo. </li>
+					</ol>
+				</section>					
+				
+				<section>
+					<h2>¿Qué soluciones hay en la actualidad para crear apps HTML5?</h2>
+					<ul>
+						<li>Usar WebView/Nativo, para <a href="http://developer.android.com/guide/webapps/webview.html" target="_blank">Android teneis esta guía</a> y para <a href="http://blog.techno-barje.fr/post/2010/10/06/UIWebView-secrets-part3-How-to-properly-call-ObjectiveC-from-Javascript/" target="_blank">iOS esta otra</a> (en ambas podeis comunicaros en Nativo con interfaces Javascript). </li>
+						<li><a href="http://phonegap.com/" target="_blank">PhoneGap/Cordova</a> permite que utiliceis el hardware a traves de Javascript sin complicaros la vida, ademas se puede hacer cualquier cosa extendiendolo con plugins en nativo.</li>
+						<li>Hay otras soluciones como <a href="http://www.mosync.com/" target="_blank">MoSync</a> que básicamente mejoran lo que ya ofrece Phonegap</li>
+						<li><a href="http://www.appcelerator.com/" target="_blank">Appcelerator</a> tiene cierta compatibilidad con HTML5, pero juega en otro campo.</li>
+					</ul>
+				</section>		
+				
+				<section>
+					<h2>¿Qué frameworks pueden facilitarme la vida?</h2>
+					<ul>
+						<li>Pasando de framework me lo puedo hacer todo con HTML5/CSS3/Javascript (<i>pero piensa en hacerte un framework si vas ha hacer mas de una aplicación</i>). </li>
+						<li>Puedo usar <a href="http://jquerymobile.com/" target="_blank">jQuery Mobile</a> o <a href="http://jqtouch.com/" target="_blank">jQTouch</a> si me gusta jQuery (benchmarks interesantes sobre jQuery).</li>
+						<li>Puedo usar <a href="http://www.lungojs.com/" target="_blank">LungoJS</a> o <a href="http://www.sencha.com/" target="_blank">Sencha</a> si me gusta tener el código javascript bien organizado y orientado a clases.</li>
+						<li>En la página de PhoneGap podeis encontrar mas <a href="http://phonegap.com/tools/" target="_blank">frameworks y librerías</a></li>
+					</ul>
+				</section>																		
+				
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Algunos ejemplos de código</h2>
+						<p>
+							Vamos a repasar algunos de los frameworks que hemos citado:
+						</p>
+						<a href="#/2/1" class="image">
+							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
+						</a>
+					</section>
+					<section>
+						<h2>jQTouch</h2>
+					<pre><code>
+&lt;html&gt;
+    &lt;head&gt;
+	&lt;title&gt;Kilo&lt;/title&gt;
+	&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;jqtouch/jqtouch.css&quot;&gt;
+	&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;themes/jqt/theme.css&quot;&gt;
+	&lt;script type=&quot;text/javascript&quot; src=&quot;jqtouch/jquery.js&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot; src=&quot;jqtouch/jqtouch.js&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+	    var jQT = $.jQTouch({
+	        icon: &#39;kilo.png&#39;,
+	        statusBar: &#39;black&#39;
+	    });
+	&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id=&quot;home&quot;&gt;
+            &lt;div class=&quot;toolbar&quot;&gt;
+                &lt;h1&gt;Kilo&lt;/h1&gt;
+            &lt;/div&gt;
+            &lt;ul class=&quot;edgetoedge&quot;&gt;
+                &lt;li class=&quot;arrow&quot;&gt;&lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;about&quot;&gt;
+            &lt;div class=&quot;toolbar&quot;&gt;
+                &lt;h1&gt;About&lt;/h1&gt;
+                &lt;a class=&quot;button back&quot; href=&quot;#&quot;&gt;Back&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+					</section>
+					
+
+					<section>
+						<h2>jQuery Mobile</h2>
+					<pre><code>
+&lt;!DOCTYPE html&gt; 
+&lt;html&gt; 
+	&lt;head&gt; 
+	&lt;title&gt;Page Title&lt;/title&gt; 
+	
+	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt; 
+
+	&lt;link rel=&quot;stylesheet&quot; href=&quot;http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css&quot; /&gt;
+	&lt;script src=&quot;http://code.jquery.com/jquery-1.7.1.min.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt; 
+&lt;body&gt; 
+
+&lt;div data-role=&quot;page&quot;&gt;
+
+	&lt;div data-role=&quot;header&quot;&gt;
+		&lt;h1&gt;Page Title&lt;/h1&gt;
+	&lt;/div&gt;&lt;!-- /header --&gt;
+
+	&lt;div data-role=&quot;content&quot;&gt;	
+		&lt;p&gt;Page content goes here.&lt;/p&gt;		
+	&lt;/div&gt;&lt;!-- /content --&gt;
+
+	&lt;div data-role=&quot;footer&quot;&gt;
+		&lt;h4&gt;Page Footer&lt;/h4&gt;
+	&lt;/div&gt;&lt;!-- /footer --&gt;
+&lt;/div&gt;&lt;!-- /page --&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+					</section>					
+					
+
+
+					<section>
+						<h2>LungoJS</h2>
+					<pre><code>
+&lt;!doctype html&gt;
+&lt;html manifest=&quot;APP.appcache&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;ToDo.js with LungoJS&lt;/title&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;../../release/lungo-1.2.min.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;../../release/lungo.theme.default.css&quot;&gt;
+&lt;/head&gt;
+
+&lt;body class=&quot;app&quot;&gt;
+    &lt;section id=&quot;login&quot;&gt;
+        &lt;article class=&quot;splash indented&quot;&gt;
+            &lt;div&gt;
+                &lt;h1&gt;ToDo.&lt;span class=&quot;semi-opacity&quot;&gt;js&lt;span&gt;&lt;/h1&gt;
+                &lt;input type=&quot;text&quot; placeholder=&quot;Type your user&quot; /&gt;
+                &lt;input type=&quot;password&quot; placeholder=&quot;Type your password&quot; /&gt;
+                &lt;a href=&quot;#&quot; id=&quot;btnLogin&quot; class=&quot;button big&quot; data-icon=&quot;key&quot;&gt;Test Demo!&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+    &lt;/section&gt;
+    &lt;script src=&quot;../../release/lungo-1.2.packed.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;	
+	var App = (function(lng, undefined) {	
+	    lng.App.init({
+	        name: &#39;ToDo.JS&#39;,
+	        version: &#39;0.1&#39;
+	    });	
+	    return {};	
+	})(LUNGO);
+	&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+					</section>		
+					
+					
+					<section>
+						<h2>Sencha Touch</h2>
+					<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Hello World&lt;/title&gt;
+        &lt;script src=&quot;lib/touch/sencha-touch.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+        &lt;script type=&quot;text/javascript&quot;&gt;
+	new Ext.Application({
+	    launch: function() {
+		new Ext.Panel({
+		    fullscreen: true,
+		    dockedItems: [{xtype:&#39;toolbar&#39;, title:&#39;My First App&#39;}],
+		    layout: &#39;fit&#39;,
+		    styleHtmlContent: true,
+		    html: &#39;&lt;h2&gt;Hello World!&lt;/h2&gt;I did it!&#39;
+		});
+	    }
+	});
+	&lt;/script&gt;
+        &lt;link href=&quot;lib/touch/resources/css/sencha-touch.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+					</section>						
+					
+					<section>
+						<h2>Elige tu framework en función de tus gustos</h2>
+						<a href="#/2" class="image">
+							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" style="-webkit-transform: rotate(180deg);">
+						</a>
+					</section>
+				</section>
+
+				<section>
+					<h2>Problemas mas comunes</h2>
+					<ul>
+						<li class="fragment">En versiones antiguas de iOS y Android no se soporta la propiedad CSS <i>position:fixed</i> muy usada para headers y footers.</li>						
+						<li class="fragment">En estas versiones tambien se ignora la propiedad CSS <i>overflow:scroll</i> no permitiendo areas de scroll (<a href="http://mobile.tutsplus.com/tutorials/mobile-web-apps/ios-5-fixed-positioning-and-content-scrolling/" target="_blank">una explicacion completa</a>).</li>
+						<li class="fragment">La implementación de CSS3 aun no esta libre de errores en webkit (<i>especialmente en Android cuando jugamos con transformaciones 3D</i>).</li>
+						<li class="fragment">Tener que afinar con el DPI y los diferentes formatos de pantalla (<a href="http://www.fiveminutes.eu/targeting-hight-screen-densities-with-css-media-queries/" target="_blank">soluciones</a>).</li>												
+						<li class="fragment">Abusar de Javascript hace las apps mas lentas (<i>uso de multiples librerias, animaciones JS, mal uso del DOM</i>).</li>												
+					</ul>
+				</section>
+
+				<section>
+					<h2>Soluciones mas comunes</h2>
+					<ul>
+						<li class="fragment">A partir de iOS 5 y Android 4 los problemas en CSS (<i>overflow:scroll y position:fixed</i>) se han solucionado <a href="http://johanbrook.com/browsers/native-momentum-scrolling-ios-5/" target="_blank">de forma nativa</a> y <a href="http://mobile.tutsplus.com/tutorials/mobile-web-apps/ios-5-fixed-positioning-and-content-scrolling/" target="_blank">mas info</a>.</li>						
+						<li class="fragment">En versiones anteriores, podemos usar fallbacks por javascript, en el caso de jQuery Mobile existe el atributo data-position="fixed" para headers y footers (<i>aunque no es la mejor solución</i>).</li>
+						<li class="fragment">Para definir areas de scroll siempre podemos usar <a href="http://cubiq.org/iscroll-4" target="_blank">iScroll.</a></li>
+						<li class="fragment">Para los diferentes formatos de pantalla podemos usar media-querys o <a href="http://en.wikipedia.org/wiki/Responsive_Web_Design">responsive desing</a>, permitiendo apps compatibles con tablets y smartphones.</li>												
+						<li class="fragment">Para efectos ya tenemos CSS3 y hay <a href="http://ricostacruz.com/jquery.transit/" target="_blank">librerias JS</a> que nos facilitan la vida, usando transiciones o animaciones.</li>
+					</ul>
+				</section>
+				
+				
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Menos hablar y mas ejemplos...</h2>
+						<p>
+							...bueno alla vamos.
+						</p>
+						<a href="#/2/1" class="image">
+							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
+						</a>
+					</section>
+					
+					<section>
+						<h2>Cambiar el diseño en función de la rotación</h2>
+						<p>A veces, es interesante, ofrecer al usuario una experiencia diferente en función de la orientación de la pantalla</p>
+						<div><img src="img/media.jpg" /></div>
+					</section>
+					
+
+					<section>
+						<h2>El código HTML5</h2>
+						<p>A la minima expresión:</p>
+					<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;title&gt;Orientacion Test&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+	&lt;section class=&quot;page&quot;&gt;
+		&lt;div class=&quot;main&quot;&gt;
+			&lt;header&gt;&lt;h1&gt;Cabecera&lt;/h1&gt;&lt;/header&gt;
+			&lt;section class=&quot;content&quot;&gt;
+				Contenido
+			&lt;/section&gt;
+		&lt;/div&gt;
+		&lt;footer&gt;
+			&lt;nav&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href=&quot;#A&quot;&gt;A&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#B&quot;&gt;B&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#C&quot;&gt;C&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/nav&gt;
+		&lt;/footer&gt;
+	&lt;/section&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+					</section>					
+					
+
+					<section>
+						<h2>Un poco de CSS</h2>
+						<p>Definimos un layout sencillo:</p>
+
+					<pre><code>
+	    body, html,.page{
+	    	font-family: Arial, Helvetica, sans-serif;
+	    	height:100%;
+	    }
+	    	    
+	    header, footer{
+	    	background-color:#000;	    	margin:0px;	    	text-align: center;	    	
+	    	padding:3px;	    	color:#fff;	    		    	
+	    }
+	    
+	    footer ul{
+	    	margin:0px;	    	padding:0px;	    	list-style: none;	    	
+	    	min-height:60px;
+	    }
+	    footer li{
+	    	float:left;	    	width:33%;	    	border:solid 1px #fff;
+	    }
+	    
+	    footer li a{
+	    	color:#fff;	    	text-decoration:none;	    	width:100%;	    	
+	    	display:block;	    	padding-top:20px;	    	padding-bottom:20px;
+	    	text-align: center;	    
+	    }	    
+	    section.content{
+	    	height:200px;
+	    	padding-top:100px;
+	    	font-size: 22px;
+	    	text-align: center;	
+	    }
+
+					</code></pre>
+					</section>	
+					
+					
+					<section>
+						<h2>Usando Media Queries</h2>
+						<p>Ahora la media query usa la orientacion del dispositívo para cambiar el menu de posición:</p>
+						
+					<pre><code>
+		@media screen and (orientation:landscape) {		    
+		    .main{
+		    	float:right;
+		    	width:70%;
+		    	height:100%;
+		    	
+		    }
+		    
+		    footer{
+		    	float:left;
+		    	width:29%;
+		    	height:100%;
+		    }
+		    
+		    footer li{
+		    	float:none;
+		    	width:100%;
+		    }
+		    
+		    footer ul{
+		    	list-style: none;
+		    	height:100%;
+		    }			  	 
+		}
+					</code></pre>
+					</section>						
+
+					<section>
+						<h2>El resultado en navegador</h2>
+						<div><a href="test.html" target="_blank">Ver ejemplo</a></div>
+						<div><img src="img/media_res.jpg" /></div>
+					
+					</section>							
+					
+				</section>
+
+				<section>
+					<h2>Diferencias entre tamaño de pantalla y resolución de pantalla (DPI - <a href="http://blog.edwinevans.me/?p=131" target="_blank">tamaño vs densidad</a>)</h2>
+					
+					<ul>
+						<li class="fragment">Uno de los aspectos mas importantes que hay que tener en cuenta cuando usemos CSS3, es la diferencia entre tamaño de pantalla y densidad de pantalla.</li>						
+						<li class="fragment">Cuando se lanzó iPhone al mercado el tamaño y la resolucion de pantalla eran iguales (320x480).</li>
+						<li class="fragment">Luego vino Android, Retina Display y pantallas cada vez mejores que implementaron un mayor DPI (puntos por pulgada o ppp).</li>
+						<li class="fragment">¿Y esto en que me afecta?...</li>												
+					</ul>				
+					
+				</section>
+				
+
+				<section>
+					<section>
+						<h2>CSS3 y background-size</h2>					
+						<p>Gracias a CSS3 y la propiedad background-size, podemos hacer ajustar el tamaño de las imagenes a la resolución de pantalla.</p>
+						<p>Veamos un ejemplo con iPhone 3GS, iPhone 4 y Samsung Gallaxy S2:</p>			
+						<a href="#/2/1" class="image">
+							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
+						</a>	
+					</section>
+					
+					<section>
+						<h2>Formato de pantalla</h2>
+						<p>Queremos poner una imagen de fondo en varios dispositívos:</p>
+						<div><img src="img/sizes.jpg" /></div>
+					
+					</section>	
+					<section>
+						<h3>Solución con background-size</h3>
+					<pre><code>
+.fondo{
+	width: 100%; height: 100%;
+	background-image: url(test.png); /* Tamaño de la imagen 640x960 pixels */
+	background-size: 320px 480px;
+}
+					</code></pre>
+						<div><img src="img/sizes_bg.jpg" /></div>
+					
+					</section>			
+					
+					<section>
+						<h3>Otra solución</h3>
+					<pre><code>
+.fondo{
+	width: 100%; height: 100%;
+	background-image: url(test.png); /* Tamaño de la imagen 640x960 pixels */
+	background-size: cover;
+}
+					</code></pre>
+						<div><img src="img/sizes_bg_cover.jpg" /></div>
+					
+					</section>											
+																		
+					
+									
+				</section>				
+				
+
+				<section>
+					<h2>Para terminar...</h2>
+					<ul>
+						<li class="fragment">Usar siempre el metatag viewport.</li>						
+						<li class="fragment">Tened en cuenta la segmentación en Android y haced pruebas en versiones de la 2 a la 4 o superior.</li>
+						<li class="fragment">Si orientais las apps solo a iOS tened en cuenta las versiones entre la 4 y la 5 o superior.</li>
+						<li class="fragment">Estad atentos a la evolución de webkit en Android e iOS.</li>								
+						<li class="fragment">Si quereis publicar en Google Play o App Store, os toca aprender un poco de Eclipse y XCode, si quereis que alguien os haga la vida mas facil... no os olvideis de PhoneGap.</li>
+						<li class="fragment">Usad siempre animaciones CSS3 o transiciones en vez de Javascript (CSS3 permite aceleración por hardware).</li>
+					</ul>
+				</section>
+
+			
+				
+				<section>
+					<h1>Gracias</h1>
+					<h3 class="inverted">Por Óscar Antón / molecularts.com</h3>
+					<ul>
+						<li><a href="https://twitter.com/#!/oscaranton" target="_blank">sígueme en @oscaranton</a></li>
+						<li><a href="http://html5spain.wordpress.com/" target="_blank">visita HTML5 Spain</a></li>
+						<li><a href="http://www.molecularts.com/" target="_blank">visita Molecularts.com</a></li>
+						<li><a href="http://www.miraiespana.com/" target="_blank">gracias a Mirai</a></li>
+					</ul>
+				</section>
+			</div>
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
+
+			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+			<div class="progress"><span></span></div>
+			
+		</div>
+
+		<!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
+		<script src="lib/highlight.js"></script>
+		<script src="lib/classList.js"></script>
+		
+		<script src="js/reveal.js"></script>
+		
+		<script>
+			// Parse the query string into a key/value object
+			var query = {};
+			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+				query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+			} );
+
+			// Fires when a slide with data-state=customevent is activated
+			Reveal.addEventListener( 'customevent', function() {
+				alert( '"customevent" has fired' );
+			} );
+
+			// Fires each time a new slide is activated
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+			} );
+
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: true,
+
+				// Display a presentation progress bar
+				progress: true,
+
+				// If true; each slide will be pushed to the browser history
+				history: true,
+
+				// Loops the presentation, defaults to false
+				loop: false,
+
+				// Flags if mouse wheel navigation should be enabled
+				mouseWheel: true,
+
+				// Apply a 3D roll to links on hover
+				rollingLinks: true,
+
+				// UI style
+				theme: query.theme || 'default', // default/neon
+
+				// Transition style
+				transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+			});
+
+			hljs.initHighlightingOnLoad();
+		</script>
+		
+  
+    <!-- Piwik   -->
+    <script type="text/javascript">
+        var pkBaseURL = (("https:" == document.location.protocol) ? "https://soporte.molecularts.com/piwik/" : "http://soporte.molecularts.com/piwik/");
+        document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+        </script><script type="text/javascript">
+        try {
+        var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+        piwikTracker.trackPageView();
+        piwikTracker.enableLinkTracking();
+        } catch( err ) {}
+    </script><noscript><p><img src="http://soporte.molecularts.com/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+    <!-- End Piwik Tracking Tag -->
+    <!-- GOOGLE ANALITYCS   -->
+    <script type="text/javascript">
+    var _gaq=[['_setAccount','UA-19115973-1'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));      
+    </script> 		
+
+	</body>
+</html>
